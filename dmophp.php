@@ -25,7 +25,7 @@ if (!$connection) {
 
 	$rs = $connection->query("SELECT * FROM users");
 	while ($row = mysqli_fetch_assoc($rs)) {
-			echo "id.: " . $row['user_id'] . " / name: " . $row['username'] . "<br>";
+			echo "id.: " . $row['user_id'] . " / naime: " . $row['username'] . "<br>";
 		}
 	mysqli_close($connection);
 }
