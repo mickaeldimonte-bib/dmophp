@@ -24,10 +24,8 @@ if (!$connection) {
 	echo "Funny, how things can, sometimes, go as planned :)<br> Here is version 1<br><br>";
 
 	$rs = $connection->query("SELECT * FROM users");
-	if ($rs) {
-		while ($row = mysqli_fetch_assoc($rs)) {
-			echo "id.: " . $row['user_id'] . " / naime: " . $row['username'] . "<br>";
-		}
+	while ($row = mysqli_fetch_assoc($rs)) {
+		echo "id.: " . $row['user_id'] . " / naime: " . $row['username'] . "<br>";
 	}
 	mysqli_close($connection);
 }
