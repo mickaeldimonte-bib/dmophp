@@ -21,7 +21,7 @@ if (!$connection) {
 	echo "dbpassword = " . $dbpassword . "<br>";
 } else {
 	echo "Successfully connected to the database '" . $dbname . "'.<br>";
-	echo "Funny, how things can, sometimes, go as planned :)<br> Here is version 1<br><br>";
+	echo "Funny, how things can, sometimes, go as planned :)<br><br><b> Here is version 1</b><br><br>";
 
 	$rs = $connection->query("SELECT * FROM users");
 	while ($row = mysqli_fetch_assoc($rs)) {
