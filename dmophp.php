@@ -21,11 +21,13 @@ if (!$connection) {
 	echo "dbpassword = " . $dbpassword . "<br>";
 } else {
 	echo "Successfully connected to the database '" . $dbname . "'.<br>";
-	echo "Funny, how things can, sometimes, go as planned :)<br><br><b> Here is version 1</b><br><br>";
+	echo "Funny, how things can, sometimes, go as planned :)<br><br><b> Here is version 2</b><br><br>";
 
 	$rs = $connection->query("SELECT * FROM users");
-	while ($row = mysqli_fetch_assoc($rs)) {
-		echo "id.: " . $row['user_id'] . " / naime: " . $row['username'] . "<br>";
+	if ($rs){
+		while ($row = mysqli_fetch_assoc($rs)) {
+			echo "id.: " . $row['user_id'] . " / naime: " . $row['username'] . "<br>";
+		}
 	}
 	mysqli_close($connection);
 }
