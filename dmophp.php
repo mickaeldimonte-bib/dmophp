@@ -1,9 +1,9 @@
 <?php
 
-$dbhost = getenv("DB_SERVICE_HOST");
-$dbport = getenv("DB_SERVICE_PORT");
+$dbhost = getenv("DB_HOST");
+$dbport = getenv("DB_PORT");
 $dbname = getenv("DB_NAME");
-$dbuser = getenv("DB_USER");
+$dbuser = getenv("DB_USERNAME");
 $dbpassword = getenv("DB_PASSWORD");
 
 $host= gethostname();
